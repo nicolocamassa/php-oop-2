@@ -52,7 +52,7 @@ class ProductType extends Product
         $this->size = $_size;
     }
 
-    function mainInfoProduct()
+    public function mainInfoProduct()
     {
         return $this->name .
             ' Genere: ' . $this->genre .
@@ -60,6 +60,16 @@ class ProductType extends Product
             ' Grandezza: ' . $this->size .
             ' Immagine: ' . $this->image;
     }
+
+    private function genreProduct(){
+        return $this->genre;
+    }
+
+    public function getGenreProduct(){
+        return $this->genreProduct();
+    }
+
+    
 }
 
 /* CREAZIONE DELLA CLASSE CATEOGORIA */
@@ -147,7 +157,7 @@ $product_type_trixie = new ProductType('Giocattolo', 'Tessuto', 30, 'Topini di p
             </div>
             <h1><?php echo '<p>' . $product_type_royalCanin->name . '</p>'; ?></h1>
             <div class="price"><?php echo '<p>' . $product_type_royalCanin->getPrice() .'€</p>'?></div>
-            <div class="price"><?php echo '<p>' . $product_type_royalCanin->genre .'</p>'?></div>
+            <div class="price"><?php echo '<p>' . $product_type_royalCanin->getGenreProduct() .'</p>'?></div>
         </div>
 
         <div class="card">
@@ -156,7 +166,7 @@ $product_type_trixie = new ProductType('Giocattolo', 'Tessuto', 30, 'Topini di p
             </div>
             <h1><?php echo '<p>' . $product_type_almoNatureDog->name . '</p>'; ?></h1>
             <div class="price"><?php echo '<p>' . $product_type_almoNatureDog->getPrice() .'€</p>'?></div>
-            <div class="price"><?php echo '<p>' . $product_type_almoNatureDog->genre .'</p>'?></div>
+            <div class="price"><?php echo '<p>' . $product_type_almoNatureDog->getGenreProduct() .'</p>'?></div>
         </div>
 
 
@@ -166,7 +176,7 @@ $product_type_trixie = new ProductType('Giocattolo', 'Tessuto', 30, 'Topini di p
             </div>
             <h1><?php echo '<p>' . $product_type_almoNatureCat->name . '</p>'; ?></h1>
             <div class="price"><?php echo '<p>' . $product_type_almoNatureCat->getPrice() .'€</p>'?></div>
-            <div class="price"><?php echo '<p>' . $product_type_almoNatureCat->genre .'</p>'?></div>
+            <div class="price"><?php echo '<p>' . $product_type_almoNatureCat->getGenreProduct() .'</p>'?></div>
         </div>
 
 
@@ -176,7 +186,7 @@ $product_type_trixie = new ProductType('Giocattolo', 'Tessuto', 30, 'Topini di p
             </div>
             <h1><?php echo '<p>' . $product_type_guppy->name . '</p>'; ?></h1>
             <div class="price"><?php echo '<p>' . $product_type_guppy->getPrice() .'€</p>'?></div>
-            <div class="price"><?php echo '<p>' . $product_type_guppy->genre .'</p>'?></div>
+            <div class="price"><?php echo '<p>' . $product_type_guppy->getGenreProduct().'</p>'?></div>
         </div>
 
 
@@ -186,7 +196,7 @@ $product_type_trixie = new ProductType('Giocattolo', 'Tessuto', 30, 'Topini di p
             </div>
             <h1><?php echo '<p>' . $product_type_wilma->name . '</p>'; ?></h1>
             <div class="price"><?php echo '<p>' . $product_type_wilma->getPrice() .'€</p>'?></div>
-            <div class="price"><?php echo '<p>' . $product_type_wilma->genre .'</p>'?></div>
+            <div class="price"><?php echo '<p>' . $product_type_wilma->getGenreProduct() .'</p>'?></div>
         </div>
 
 
@@ -196,7 +206,7 @@ $product_type_trixie = new ProductType('Giocattolo', 'Tessuto', 30, 'Topini di p
             </div>
             <h1><?php echo '<p>' . $product_type_easyCrystal->name . '</p>'; ?></h1>
             <div class="price"><?php echo '<p>' . $product_type_easyCrystal->getPrice() .'€</p>'?></div>
-            <div class="price"><?php echo '<p>' . $product_type_easyCrystal->genre .'</p>'?></div>
+            <div class="price"><?php echo '<p>' . $product_type_easyCrystal->getGenreProduct() .'</p>'?></div>
         </div>
 
 
@@ -206,7 +216,7 @@ $product_type_trixie = new ProductType('Giocattolo', 'Tessuto', 30, 'Topini di p
             </div>
             <h1><?php echo '<p>' . $product_type_trixie->name . '</p>'; ?></h1>
             <div class="price"><?php echo '<p>' . $product_type_trixie->getPrice() .'€</p>'?></div>
-            <div class="price"><?php echo '<p>' . $product_type_trixie->genre .'</p>'?></div>
+            <div class="price"><?php echo '<p>' . $product_type_trixie->getGenreProduct() .'</p>'?></div>
         </div>
     </div>
 </body>
