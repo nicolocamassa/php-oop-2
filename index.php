@@ -50,7 +50,7 @@ class ProductType extends Product
 
     function mainInfoProduct()
     {
-        return  'Nome Prodotto: ' . $this->name .
+        return $this->name .
             ' Genere: ' . $this->genre .
             ' Materiale: ' . $this->material .
             ' Grandezza: ' . $this->size .
@@ -90,11 +90,120 @@ $product_type_trixie = new ProductType('Giocattolo', 'Tessuto', 30, 'Topini di p
 
 /* TODO: STAMPARE PRODOTTI NELLE CARD */
 
-/* VISUALIZZAZIONE DEI PRODOTTI */
-echo '<p>' . $product_type_royalCanin->mainInfoProduct() . '</p>';
-echo '<p>' . $product_type_almoNatureDog->mainInfoProduct() . '</p>';
-echo '<p>' . $product_type_almoNatureCat->mainInfoProduct() . '</p>';
-echo '<p>' . $product_type_guppy->mainInfoProduct() . '</p>';
-echo '<p>' . $product_type_wilma->mainInfoProduct() . '</p>';
-echo '<p>' . $product_type_easyCrystal->mainInfoProduct() . '</p>';
-echo '<p>' . $product_type_trixie->mainInfoProduct() . '</p>';
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Negozio di animali</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+    body{
+        font-family: 'Inter';
+    }
+
+    .img-container{
+        width: 100%;
+    }
+
+    .img-container img{
+        width: 100%;
+    }
+
+    .card{
+        width: 350px;
+        background-color: white;
+        padding: 5px 20px;
+        border-radius: 20px;
+        -webkit-box-shadow: 0px 0px 23px -4px rgba(0,0,0,0.5); 
+        box-shadow: 0px 0px 23px -4px rgba(0,0,0,0.5);
+        margin-left: 50px;
+        margin-bottom: 50px;
+    }
+
+    p{
+        margin: 0;
+    }
+    .price{
+        font-size: 20px;
+    }
+
+    .card-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+</style>
+<body>
+    <div class="card-container">
+        <div class="card">
+            <div class="img-container">
+                <img src="<?php echo $product_type_royalCanin->image ?>" alt="">
+            </div>
+            <h1><?php echo '<p>' . $product_type_royalCanin->name . '</p>'; ?></h1>
+            <div class="price"><?php echo '<p>' . $product_type_royalCanin->price .'€</p>'?></div>
+            <div class="price"><?php echo '<p>' . $product_type_royalCanin->genre .'</p>'?></div>
+        </div>
+
+        <div class="card">
+        <div class="img-container">
+                <img src="<?php echo $product_type_almoNatureDog->image ?>" alt="">
+            </div>
+            <h1><?php echo '<p>' . $product_type_almoNatureDog->name . '</p>'; ?></h1>
+            <div class="price"><?php echo '<p>' . $product_type_almoNatureDog->price .'€</p>'?></div>
+            <div class="price"><?php echo '<p>' . $product_type_almoNatureDog->genre .'</p>'?></div>
+        </div>
+
+
+        <div class="card">
+            <div class="img-container">
+                <img src="<?php echo $product_type_almoNatureCat->image ?>" alt="">
+            </div>
+            <h1><?php echo '<p>' . $product_type_almoNatureCat->name . '</p>'; ?></h1>
+            <div class="price"><?php echo '<p>' . $product_type_almoNatureCat->price .'€</p>'?></div>
+            <div class="price"><?php echo '<p>' . $product_type_almoNatureCat->genre .'</p>'?></div>
+        </div>
+
+
+        <div class="card">
+        <div class="img-container">
+                <img src="<?php echo $product_type_guppy->image ?>" alt="">
+            </div>
+            <h1><?php echo '<p>' . $product_type_guppy->name . '</p>'; ?></h1>
+            <div class="price"><?php echo '<p>' . $product_type_guppy->price .'€</p>'?></div>
+            <div class="price"><?php echo '<p>' . $product_type_guppy->genre .'</p>'?></div>
+        </div>
+
+
+        <div class="card">
+            <div class="img-container">
+                <img src="<?php echo $product_type_wilma->image ?>" alt="">
+            </div>
+            <h1><?php echo '<p>' . $product_type_wilma->name . '</p>'; ?></h1>
+            <div class="price"><?php echo '<p>' . $product_type_wilma->price .'€</p>'?></div>
+            <div class="price"><?php echo '<p>' . $product_type_wilma->genre .'</p>'?></div>
+        </div>
+
+
+        <div class="card">
+        <div class="img-container">
+                <img src="<?php echo $product_type_easyCrystal->image ?>" alt="">
+            </div>
+            <h1><?php echo '<p>' . $product_type_easyCrystal->name . '</p>'; ?></h1>
+            <div class="price"><?php echo '<p>' . $product_type_easyCrystal->price .'€</p>'?></div>
+            <div class="price"><?php echo '<p>' . $product_type_easyCrystal->genre .'</p>'?></div>
+        </div>
+
+
+        <div class="card">
+            <div class="img-container">
+                <img src="<?php echo $product_type_trixie->image ?>" alt="">
+            </div>
+            <h1><?php echo '<p>' . $product_type_trixie->name . '</p>'; ?></h1>
+            <div class="price"><?php echo '<p>' . $product_type_trixie->price .'€</p>'?></div>
+            <div class="price"><?php echo '<p>' . $product_type_trixie->genre .'</p>'?></div>
+        </div>
+    </div>
+</body>
+</html>
